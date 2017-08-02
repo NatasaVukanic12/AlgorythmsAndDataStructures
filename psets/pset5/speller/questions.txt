@@ -1,0 +1,12 @@
+0.  According to Merriam-Webster's Medical Dictionary, pneumonoultramicroscopicsilicovolcanoconiosis is a pneumoconiosis caused by inhalation of very fine silicate or quartz dust. 
+//odgovor iz tekstualnog fajla koji se nalazi u folderu texts
+1.  vraca upotrebu resursa, funkcija prima 2 parametra, i vraca izvestaj koriscenja resursa za procese definisane prvim parametrom, to moze biti: RUSAGE_SELF, RUSAGE_CHILDREN,  RUSAGE_THREAD
+2.  16
+3.  Zato sto proracunavamo vrednost (vreme) u sekundama, pa nam je potrebno vreme od pre i vreme nakon izvrsavanja da bi precizno odredili
+4.  For petlja uzima karakter po karakter od pocetka do kraja fajla, u prvom if uslovu proveravamo da li je karakter slovo ili apostrof (uz index veci od 0)-jer su samo te vrednosti dozvoljene, 
+zatim dodajemo karakter u rec(rec kao niz karaktera) i povecavamo brojac (indeksiramo sledece mesto u reci-prebacimo se na sledecu poziciju). U slucaju kada je index veci od reci, onda ga prebacimo na nulu - 
+presli smo na sledecu rec. sledeci uslov- proveravamo da li je karakter broj, ako jeste ignorisemo ga i prelazimo na sledeci karakter (ne stavljamo ga u niz rec). U slucaju kada je index veci od nule, znaci da
+smo nasli celu rec, tako da trenutni string oznacimo kao gotovu rec time sto mu dodajemo '\0' na kraj i povecavamo promenljivu za brojanje reci za 1, proveravamo da li je rec pogresno napisana, dodamo vreme
+potrebno za ovo izvrsavanje na ukupno vreme, u slucaju da je rec pogresno napisana istampamo je i postavljamo vrednost indexa na 0.
+5.  moze da se javi problem ako ne znamo kako su podaci struktuirani, zato sto bi to znacilo da svaki put moramo d aprepravljamo funkciju, a i tesko bi se citali fajlovi koji imaju space karakter
+6.  u slucaju da pokusamo da promenimo vrednost na koju pokazuje, kompajler ce bacati warning
