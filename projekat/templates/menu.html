@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    menu
+{% endblock %}
+{% block main %}
+<div class="bgd">
+    <div class="NwBgd">
+    <span title="Torte">
+        <a href="{{ url_for('cakesU') }}" class="B"><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/7309-200.png" style="width:100px;height:100px;"></img></a>
+    </span>
+    <span title="Kolaci">
+        <a href="{{ url_for('cakesD') }}" class="B"><img src="https://www.iconexperience.com/_img/o_collection_png/green_dark_grey/512x512/plain/cake2.png" style="width:100px;height:100px;"></img></a>
+    </span>
+    <span title="Sitni kolaci">
+        <a href="{{ url_for('cakesT') }}" class="B"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdy5TwerBfNw7cAvculHqqO_TaP2IcgDcLbqoFcSB1GwmR-7CC" style="width:100px;height:100px;"></img></a>
+    </span>
+    <span title="Healthy bowls">
+        <a href="{{ url_for('cakesQ') }}" class="B"><img src="https://image.freepik.com/free-icon/porridge-bowl_318-39962.jpg" style="width:100px;height:100px;"></img></a>
+    </span>
+    <span title="Pica">
+        <a href="{{ url_for('drinks') }}" class="B"><img src="https://cdn3.iconfinder.com/data/icons/food-vector-line-6/128/297-512.png" style="width:100px;height:100px;"></img></a>
+    </span>
+    </div>
+</div>
+{% endblock %}

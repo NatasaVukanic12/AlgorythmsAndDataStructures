@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Contact
+{% endblock %}
+{% block main %}
+    <div class="bgd">
+
+        <h1>KONTAKT</h1><hr>
+        <div class="cbgd">
+        <form action="mailto:sofi.M95@gmail.com" method="get">
+        <fieldset>
+            <div class="form-group">
+                <p class="txt" align="center">Vase ime (obavezno)</p>
+                <input autocomplete="off" autofocus class="form-control" name="Name" type="text" required/>
+            </div>
+            <div class="form-group">
+                <p class="txt" align="center">Vasa e-posta (obavezno)</p>
+                <input class="form-control"  name="E-mail" type="email" required/>
+            </div>
+            <div class="form-group">
+                <p class="txt" align="center">Vasa poruka</p>
+                <input class="form-control" name="Msg" type="text"/>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit" value="Send">Posalji</button>
+            </div>
+        </fieldset>
+    </form>
+    <br><br>
+    </div>
+    <br><br>
+    <div class="info">
+        <table class="table">
+            <tr>
+                <th class="th"><b>E-mail</b></th>
+                <th class="th"><b>Dostava</b></th>
+                <th class="th"><b>Radno vreme</b></th>
+            </tr>
+            <tr>
+                <td class="td">JoyDivision@gmail.com</td>
+                <td class="td">Vrsimo dostavu po ceni od 100 din na teritoriji Novog Sada,<br> za porudzbine preko 1000 din dostava je besplatna</td>
+                <td class="td">Radnim danima od 09:00-17:00,<br> Subotom od 10:00-18:00</td>
+            </tr>
+        </table>
+        
+    </div>
+    <h1>LOKACIJA</h1><hr>
+    <div class="cbgd">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2809.2270254795917!2d19.84265371535494!3d45.2432017790989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475b10122f57fa35%3A0x400198b78bb4e365!2sBo%C5%A1ka+Buhe%2C+Novi+Sad%2C+Serbia!5e0!3m2!1sen!2sin!4v1498830187431" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    </div>
+{% endblock %}

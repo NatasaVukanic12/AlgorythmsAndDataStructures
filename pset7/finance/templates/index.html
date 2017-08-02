@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<h3>Welcome {{result.user.username}}</h3>
+<h4>Your current cash balance is: ${{result.user.cash}}</h4>
+<h4>Your total net worth: ${{result.total}}</h4>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Company name</th>
+            <th>Symbol</th>
+            <th>Stocks</th>
+            <th>Transaction worth</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for share in result.share %}
+        <tr>
+            <td>{{share.company_name}}</td>
+            <td>{{share.symbol}}</td>
+            <td>{{share['sum(quantity)']}}</td>
+            <td>{{share['sum(quantity * price)']}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

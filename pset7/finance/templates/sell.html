@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <div class="form-group">
+        <h3>Your Shares:</h3>
+        <table class="table table-stripped">
+            <fieldset>
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Company</th>
+                        <th>Number of Shares Owned</th>
+                        <th>Current Share Price</th>
+                        <th>Number of Shares to Sell</th>
+                        <!-- hidden polje za sell button -->
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for share in shares %}
+                    <form action="{{ url_for('sell') }}" method="post">
+                        <tr>
+                            <td><input readonly="readonly" class="form-control" name="symbol" value="{{share.symbol}}"></td>
+                            <td><input readonly="readonly" class="form-control" name="company" value="{{share.company_name}}"></td>
+                            <td><input readonly="readonly" class="form-control" name="quantity" value="{{share['sum(quantity)']}}"></td>
+                            <td>$&nbsp<input readonly="readonly" class="form-control" name="price" value="{{share.current_price}}"></td>
+                            <td><input type="number" class="form-control" name="number_to_sell" value="1" min="1" max="{{share['sum(quantity)']}}"></td>
+                            <td><button type="submit" class="btn btn-success">Sell</button></td>
+                        </tr>
+                    </form>
+                    {% endfor %}
+                </tbody>
+            </fieldset>
+        </table>
+    </div>
+{% endblock %}

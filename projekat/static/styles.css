@@ -1,0 +1,182 @@
+.container-fluid{
+    list-style-type: none;
+    overflow: hidden;
+    box-shadow: 3px 3px 3px #808080;
+    padding-top:10px;
+}
+.txt{
+    font-size: 16px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    text-align: center;
+    color:white;
+}
+.h{
+    font-size: 20px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    text-align: center;
+    color:white;
+}
+.bgd{
+    background-color: #1a1a1a;
+    padding-bottom: 20px;
+	padding-top: 40px;
+	padding-left: 50px;
+	padding-right: 50px;
+	box-shadow: 3px 3px 3px #808080;
+}
+.info{
+    background-color:white;
+    box-shadow: 3px 3px 3px #808080;
+    padding:10px;
+    text-align:center;
+}
+.container{
+    text-align: center;
+    overflow: hidden;
+    font-size: 15px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+.mySlides{
+    height: 500px;
+    width: 900px;
+    display: block;
+    margin: auto;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+}
+main .form-control{
+    display: inline-block;
+    width: auto;
+    background-color: black;
+    position:left;
+}
+main img{max-width: 100%;}
+main td{text-align: left;}
+.fa {
+    padding: 15px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+.fa:hover {opacity: 0.7;}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+.fa-google {
+    background: #d34836;
+    color: white;
+}
+.fa-instagram {
+    background: #ffc838;
+    color: white;
+}
+.fa-linkedin {
+    background:  #007bb6;
+    color: white;
+}
+.special{
+    padding:20px;
+    background-image: url(http://images.agoramedia.com/everydayhealth/gcms/Top-Foods-to-Avoid-With-Crohns-Disease-07-alt-1440x810.jpg);
+}
+.specialTwo{
+    background-image: url(http://images.agoramedia.com/everydayhealth/gcms/The-Best-Snacks-for-Lowering-Cholesterol-03-1440x810.jpg);
+}
+#myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color: black; 
+    color: white; 
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 10px;
+}
+#myBtn:hover {
+    background-color: #555; 
+}
+.B {
+    background-color: white;
+    border: none;
+    color: black;
+    padding-top: 200px;
+    padding: 50px 30px;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer; 
+    border-radius: 12px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    font-weight: bold;
+}
+.B:hover{background-color: #555;}
+.NwBgd{
+     background-image: url(http://www.365mm.cat/wp-content/uploads/2016/06/365mm-fotografia-stocksy-web-1.jpg);
+}
+.cbgd{
+    padding:10px;
+    background-image: url(https://wallpaperscraft.com/image/macaron_french_confection_dessert_98412_1920x1080.jpg);
+}
+.th{text-align: center;}
+.td{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+.table{border-spacing: 10px;}
+.products{
+    font-size: 20px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    color: black;
+    display:inline;
+    text-align: center;
+}
+.ProductBgrd{
+    padding:20px;
+	background-image: url(http://thegraphicsfairy.com/wp-content/uploads/blogger/-oB9cxa9JuKc/TqQMzXbwQeI/AAAAAAAAOiI/81EmxjCjEXg/s1600/fanciful%2Bframe%2Bgraphicsfairy%2Bbwb.jpg);
+    background-size: 260px 270px;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-color: white;
+}
+.slika:hover{
+     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25);
+    -o-transform:scale(1.25);
+     transform:scale(1.25);
+}
+.buyR{
+    padding:20px;
+    background-color: white;
+    text-align: left;
+    float:right;
+    margin: 0 0 10px 10px;
+    font-size: 16px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+.pomoc{
+    height:150px;
+    width:300px;
+    padding:20px;
+}
+.buyL{
+    padding:20px;
+    padding-bottom:200px;
+    color:white;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    display:inline-block;
+}

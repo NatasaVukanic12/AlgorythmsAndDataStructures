@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Cakes
+{% endblock %}
+{% block main %}
+<div class="bgd container">
+	<table class="table">
+		<tbody>
+			{% for article_row in cake | batch(4) %}
+				<tr>
+					{% for article in article_row %}
+					<td class="ProductBgrd" style="width:25%">
+						<form action="{{ url_for('buy') }}" method="get">
+							<img class="slika" src={{article.img}} alt="HTML5 Icon" style="width:200px;height:250px;">
+							<p class="td">Naziv: {{article.name}}</p>
+							<p class="td">Cena: {{article.price}} din</p>
+							<input hidden type="text" name="name" value="{{article.name}}">
+							<input hidden type="text" name="img" value="{{article.img}}">
+							<input hidden type="text" name="price" value="{{article.price}}">
+							<input type="submit" value="Kupi"></input>
+						</form>
+					</td>
+					{% endfor %}
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endblock %}

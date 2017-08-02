@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<div class="bgd">
+<img class="mySlides" src="https://c.stocksy.com/a/3NE200/z0/531901.jpg">
+<img class="mySlides" src="https://s-media-cache-ak0.pinimg.com/originals/23/2b/6d/232b6dd4b79656576d314650aeb04773.jpg">
+<img class="mySlides" src="http://4.bp.blogspot.com/-63-1cpUGqsE/VRxPD389DoI/AAAAAAAACzk/TtpBPCqK3Ys/s1600/Vanilla%2BCupcakes%2B(1%2Bof%2B1).jpg">
+<img class="mySlides" src="https://fthmb.tqn.com/sTvfgvtgr0c0UTl17R9-G8Auc24=/4288x2848/filters:no_upscale()/about/Tiramisu_Alexis-Fam-56a434873df78cf7728146f7.jpg">
+<img class="mySlides" src="https://static1.squarespace.com/static/5885617559cc684854bd0aab/t/589a2e95414fb5fe591b7058/1492398036570/stocksy+-+lemon+pie.jpg?format=1500w">
+<img class="mySlides" src="https://fthmb.tqn.com/cyW2GZG3VlSy1yCCpYShndtjwvg=/1225x817/filters:no_upscale()/about/Stocksy_carrot-cake-coconut_570736-58bf210a5f9b58af5cc567f2.jpg">
+<script>
+    var slideIndex = 0;
+    carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 2500);
+}
+</script>
+</div>
+{% endblock %}

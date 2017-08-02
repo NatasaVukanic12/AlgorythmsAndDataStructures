@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="initial-scale=1, width=device-width" name="viewport"/>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet"/>
+        <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet" >
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/spacelab/bootstrap.min.css"></script>
+
+        <title>Joy Division{% block title %}{% endblock %}</title>
+
+    </head>
+
+    <body background="https://s-media-cache-ak0.pinimg.com/736x/49/51/8a/49518aa19b5a826c85c148ae3a1552fb--wood-effect-wallpaper-wall-wallpaper.jpg">
+        <div class="container">
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <ul class="nav navbar-nav">
+                                <li><a href="{{ url_for('index') }}"><img src="https://s-media-cache-ak0.pinimg.com/736x/de/c2/7f/dec27fbbddda2e3c28c07f40aad15817.jpg" alt="Joy Division Bakery" style="width:40px;height:30px;"></a></li>
+                                <li><a href="{{ url_for('menu') }}">Meni</a></li>
+                                <li><a href="{{ url_for('about') }}">O nama</a></li>
+                                <li><a href="{{ url_for('contact') }}">Kontakt</a></li>
+                        </ul>
+                        <div class="collapse navbar-collapse" id="navbar">
+                        {% if session.user_id %}
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="{{ url_for('logout') }}">Izloguj se</a></li>
+                            </ul> 
+                        {% else %}
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="{{ url_for('register') }}">Registruj se</a></li>
+                                <li><a href="{{ url_for('login') }}">Uloguj se</a></li>
+                            </ul>
+                        {% endif %}
+                    </div>
+                    </div>
+                </div>
+            </nav>
+
+            {% if get_flashed_messages() %}
+                <header>
+                    <div class="alert alert-info" role="alert">
+                        {{ get_flashed_messages() | join(" ") }}
+                    </div>
+                </header>
+            {% endif %}
+
+            <main>
+                {% block main %}{% endblock %}
+
+            </main>
+            <div class="bgd">
+                    <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+                    <a href="https://twitter.com/" class="fa fa-twitter"></a>
+                    <a href="https://plus.google.com/" class="fa fa-google"></a>
+                    <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>
+                    <a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a>
+            </div>
+            <div class="bgd">
+                <hr>
+                <p>Joy Division Bakery - All rights reserved Ⓡ June 2017</p>
+                <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+                <script>
+                    window.onscroll = function() {scrollFunction()};
+                    
+                    function scrollFunction() {
+                        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                            document.getElementById("myBtn").style.display = "block";
+                        } else {
+                            document.getElementById("myBtn").style.display = "none";
+                        }
+                    }
+                    
+                    // When the user clicks on the button, scroll to the top of the document
+                    function topFunction() {
+                        document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+                        document.documentElement.scrollTop = 0; // For IE and Firefox
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+    <!-- background-image: url("http://st.depositphotos.com/1422675/1314/i/950/depositphotos_13140762-stock-photo-vintage-pale-green-floral-tapestry.jpg"); --!>
+
+</html>

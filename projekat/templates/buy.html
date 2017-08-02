@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    buy
+{% endblock %}
+{% block main %}
+    <div class="bgd">
+        <div class="buyL">
+            <img src={{result.img}} style="width:400px;height:450px;"></img><br><br>
+            <p>Naziv: {{result.name}}</p>
+            <p>Cena: {{result.price}} din.</p>
+        </div>
+        <div class="buyR">
+            <form action="{{ url_for('buy') }}" method="POST">
+                <fieldset>
+                    <input hidden type="text" name="name" value="{{result.name}}">
+                    <input hidden type="text" name="price" value="{{result.price}}">
+                    <div class="form-group">
+                        <label for="usr">Kolicina:</label>
+                        <input class="products" autofocus class="form-control" name="quantity" placeholder="Quantity" min="1" value="1" type="number" 
+                            id="quantity" required/>
+                    </div>
+                    <div>
+                        <label>Ukus:</label>
+                        <div class="radio">
+                            <label><input type="radio" name="flavour" value="Vanila" checked>Vanila</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="flavour" value="Cokolada">Cokolada</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="flavour"  value="Karamela">Karamela</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="flavour" value="Sumsko voce">Sumsko voce</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label>Boja:</label>
+                        <div class="radio">
+                            <label><input type="radio" name="colour" value="Bela" checked>Bela</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="colour" value="Lila">Lila</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="colour" value="Bez">Bez</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="colour" value="Roze">Roze</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="colour" value="Cokoladna">Cokoladna</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label>Preliv:</label>
+                        <div class="radio">
+                            <label><input type="radio" name="topping" value="Ukrasni slag" checked>Ukrasni slag</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="topping" value="Fondan">Fondan</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="topping" value="Secerni ukrasi">Secerni ukrasi</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label>Napomene</label><br>
+                        <input class="pomoc" type="text" name="note" maxlength="75">
+                    </div><br>
+                    <div>
+                        <input type="submit" value="Kupi"></input>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+{% endblock %}

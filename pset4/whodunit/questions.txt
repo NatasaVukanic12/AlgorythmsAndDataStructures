@@ -1,0 +1,12 @@
+1.  to je heder fajl iz stdio.h koji omogucava lakse pisanje koda koristeci typedef-ove (predefinisane vrednosti) i uz pomoc makroa (macros) definise minimum i maksimum vrednosti za svaki tip podatka
+2.  svrha je da definisemo min i max ali brojevi koje mozemo da koristimo su samo pozitivni i ima ih vise od standardnog int tipa
+3.  byte-1, dword-4, long-4, word-2
+4.  vrednost u ASCII kodu je BM, heksadecimalna vrednost je 0x424d, a decimalna 16973
+5.  biSize je broj bitova zahtevan u strukturi dok je bfSize je velicina bitmap fajla u bajtovima
+6.  U slucaju kada je biHeight negativan bitmapa je orjentisana odozgo na dole i pocinje od gornjeg levog ugla
+7.  to nam govori biBitCount, moze imati vrednosti (0,1,4,8,16,24,32)
+8.  vratice null u slucaju kada ne moze da otvori fajl (u liniji 32 pokusava da otvori fajl)
+9.  treci argument ne mora uvek da bude jedan ali kada jeste to znaci da ce probati da procita jedan element koji je duzine drugog elementa
+10. bice 3, jer ako je sirina=3, to znaci 3x3(RGB tripple)=9 i na to dodajemo padding od 3 da bi dobili 12 jer je 12 broj deljiv sa 4 jer mi paddujemo do puna 32bita 
+11. funkcija fseek, u zavisnosti od treceg prosledjenog parametra, se pozicionira na odredjeno mesto u fajlu, ako se uspesno pozicionirao vraca 0, ako ne vraca drugu vrednost
+12. SEEK_CUR predstavlja jednu od 3 varijacije za treci parametar koji se prosledjuje pri pozivu funkcije fseek, i znaci da krece od trenutne pozicije u fajlu
